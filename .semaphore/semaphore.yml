@@ -12,7 +12,7 @@ blocks:
           commands:
             - checkout
             - make app
-            - echo hello
+            - 'echo hello '
   - name: Tests
     task:
       prologue:

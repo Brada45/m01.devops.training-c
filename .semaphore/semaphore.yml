@@ -11,7 +11,6 @@ blocks:
         - name: Make app
           commands:
             - checkout
-            - artifact pull workflow app
             - make app
             - 'echo hello '
   - name: Tests
@@ -22,6 +21,7 @@ blocks:
       jobs:
         - name: Run app
           commands:
+            - artifact pull workflow app
             - chmod +x app
             - ./app
         - name: Lint

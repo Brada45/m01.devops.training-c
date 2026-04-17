@@ -3,7 +3,7 @@ name: Demo CI pipeline
 agent:
   machine:
     type: f1-standard-2
-    os_image: ubuntu2004
+    os_image: ubuntu2404
 blocks:
   - name: Build
     task:
@@ -32,3 +32,6 @@ blocks:
         - name: Unit tests
           commands:
             - make test
+promotions:
+  - name: Promotion 1
+    pipeline_file: pipeline_2.yml
